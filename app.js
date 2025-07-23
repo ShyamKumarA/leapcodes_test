@@ -6,6 +6,7 @@ const errorHandler = require('./middleware/error.middleware.js');
 const authRouter = require('./routes/auth.router.js');
 const productRouter = require('./routes/product.router.js');
 const cartRouter = require('./routes/cart.router.js');
+const userRouter = require('./routes/user.router.js');
 
 
 
@@ -19,6 +20,7 @@ app.use(cookieParser());
 app.use('/api/auth',authRouter)
 app.use('/api/product',productRouter)
 app.use('/api/cart',cartRouter)
+app.use('/api/user',userRouter)
 
 
 app.use((req,res,next)=>{
