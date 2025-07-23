@@ -3,7 +3,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../../config/database');
 
-module.exports = sequelize.define(
+const Product= sequelize.define(
   'product',
   {
     id: {
@@ -76,3 +76,6 @@ module.exports = sequelize.define(
     paranoid: true, // enables soft delete (adds deletedAt)
   }
 );
+
+
+module.exports = Product;
